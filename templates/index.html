@@ -13,7 +13,7 @@
     <script type="text/javascript">
         $('#name_form').submit(function(e) {
                 e.preventDefault();
-                produto = 
+                player = 
                 {   first_name: $('#Pnome').val(),
                     last_name: $('#Unome').val(),
                     time: $('#time').val(),
@@ -24,7 +24,7 @@
                         url: '/api/exemplo',
                         dataType: 'json',
                         contentType: 'application/json; charset=utf-8',
-                        data: JSON.stringify(produto),
+                        data: JSON.stringify(player),
                         success: function(callback) {
                             console.log(callback);
                             $('#return_Pnome').val(callback.Pnome + " " + callback.Unome)
